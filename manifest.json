@@ -3,12 +3,13 @@
   "name": "Blueshift Enhancement Suite",
   "version": "0.1.0",
   "description": "A suite of enhancements for Blueshift.",
+  "host_permissions": ["*://*.getblueshift.com/*"],
   "icons": {
     "48": "icons/blueshift-enhancement-suite.svg"
   },
   "page_action": {
     "default_icon": "icons/blueshift-enhancement-suite.svg",
-    "show_matches": ["*://*.getblueshift.com/*"],
-    "default_popup": "popups/menu.html"
+    "default_popup": "popups/menu.html",
+    "show_matches": ["*://*.getblueshift.com/*"]
   }
 }
