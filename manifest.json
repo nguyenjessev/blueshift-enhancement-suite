@@ -4,6 +4,10 @@
   "version": "0.1.0",
   "description": "A suite of enhancements for Blueshift.",
   "icons": {
-    "48": "icons/blueshift-enhancement-suite.png"
+    "48": "icons/blueshift-enhancement-suite.svg"
+  },
+  "page_action": {
+    "default_icon": "icons/blueshift-enhancement-suite.svg",
+    "show_matches": ["*://*.getblueshift.com/*"]
   }
 }
