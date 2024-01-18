@@ -20,16 +20,35 @@
           const data = message.payload;
 
           for (const [key, value] of Object.entries(data)) {
-            if (value) {
-              const pair = document.createElement('details');
-              const summary = document.createElement('summary');
-              summary.textContent = key;
-              pair.appendChild(summary);
-              pair.append(value);
-              document.querySelector('.sidebar-content').appendChild(pair);
-            }
+            const pair = createDisclosure(key, value);
+            document.querySelector('.sidebar-content').appendChild(pair);
           }
         }
       });
+
+      const createDisclosure = (key, value) => {
+        const pair = document.createElement('details');
+        const summary = document.createElement('summary');
+        const content = document.createElement('div');
+        content.classList.add('disclosure-value');
+        summary.textContent = key;
+        pair.appendChild(summary);
+
+        if (
+          value !== null &&
+          typeof value === 'object' &&
+          Object.keys(value).length > 0
+        ) {
+          for (const [k, v] of Object.entries(value)) {
+            content.appendChild(createDisclosure(k, v));
+            pair.appendChild(content);
+          }
+        } else {
+          content.textContent = value ?? 'null';
+          pair.appendChild(content);
+        }
+
+        return pair;
+      };
     });
 })();

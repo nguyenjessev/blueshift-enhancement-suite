@@ -9,6 +9,7 @@
     const templateDataResponse = await fetch(
       'https://app.getblueshift.com/api/v1/personalizations/template.json',
       {
+        credentials: 'include',
         method: 'POST',
       }
     );
