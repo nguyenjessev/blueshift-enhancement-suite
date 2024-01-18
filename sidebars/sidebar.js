@@ -15,9 +15,20 @@
 
       browser.runtime.onMessage.addListener((message) => {
         if (message.command === 'loadData') {
-          const dataP = document.createElement('p');
-          dataP.textContent = JSON.stringify(message.payload);
-          document.querySelector('.sidebar-content').appendChild(dataP);
+          document.querySelector('.sidebar-content').innerHTML = '';
+
+          const data = message.payload;
+
+          for (const [key, value] of Object.entries(data)) {
+            if (value) {
+              const pair = document.createElement('details');
+              const summary = document.createElement('summary');
+              summary.textContent = key;
+              pair.appendChild(summary);
+              pair.append(value);
+              document.querySelector('.sidebar-content').appendChild(pair);
+            }
+          }
         }
       });
     });
