@@ -2,6 +2,12 @@
   "manifest_version": 3,
   "name": "Blueshift Enhancement Suite",
   "version": "0.1.0",
+  "content_scripts": [
+    {
+      "matches": ["*://*.getblueshift.com/*"],
+      "js": ["/content_scripts/refreshData.js"]
+    }
+  ],
   "description": "A suite of enhancements for Blueshift.",
   "host_permissions": ["*://*.getblueshift.com/*"],
   "icons": {
@@ -12,6 +18,7 @@
     "default_popup": "popups/menu.html",
     "show_matches": ["*://*.getblueshift.com/*"]
   },
+  "permissions": ["activeTab"],
   "sidebar_action": {
     "default_icon": "icons/blueshift-enhancement-suite.svg",
     "default_panel": "sidebars/sidebar.html",

@@ -6,7 +6,3 @@
 html {
   font-family: var(--system-ui);
 }
-
-.hidden {
-  display: none;
-}

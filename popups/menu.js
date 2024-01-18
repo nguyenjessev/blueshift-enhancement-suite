@@ -11,7 +11,9 @@
       }
     });
 
-  document.querySelector('.show-sidebar-btn').addEventListener('click', () => {
-    browser.sidebarAction.open();
-  });
+  document
+    .querySelector('.toggle-sidebar-btn')
+    .addEventListener('click', () => {
+      browser.sidebarAction.toggle();
+    });
 })();
