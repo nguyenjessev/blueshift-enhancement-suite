@@ -8,6 +8,7 @@
   },
   "page_action": {
     "default_icon": "icons/blueshift-enhancement-suite.svg",
-    "show_matches": ["*://*.getblueshift.com/*"]
+    "show_matches": ["*://*.getblueshift.com/*"],
+    "default_popup": "popups/menu.html"
   }
 }
