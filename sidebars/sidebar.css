@@ -7,6 +7,23 @@ html {
   font-family: var(--system-ui);
 }
 
+body {
+  margin: 0;
+}
+
+.sidebar-controls {
+  margin: 1rem;
+}
+
+summary {
+  cursor: pointer;
+}
+
+summary:hover {
+  background-color: #0072ba;
+  color: white;
+}
+
 .disclosure-value {
   padding-left: 1rem;
 }
