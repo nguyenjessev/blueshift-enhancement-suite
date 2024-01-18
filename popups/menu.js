@@ -10,4 +10,8 @@
         document.querySelector('.error-content').classList.remove('hidden');
       }
     });
+
+  document.querySelector('.show-sidebar-btn').addEventListener('click', () => {
+    browser.sidebarAction.open();
+  });
 })();
