@@ -27,3 +27,7 @@ summary:hover {
 .disclosure-value {
   padding-left: 1rem;
 }
+
+.hidden {
+  display: none;
+}

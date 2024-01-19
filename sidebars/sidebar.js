@@ -8,6 +8,8 @@
       document
         .querySelector('.refresh-data-btn')
         .addEventListener('click', () => {
+          document.querySelector('.loading').classList.remove('hidden');
+          document.querySelector('.sidebar-content').innerHTML = '';
           browser.tabs.sendMessage(data[0].id, {
             command: 'refreshData',
           });
@@ -15,7 +17,7 @@
 
       browser.runtime.onMessage.addListener((message) => {
         if (message.command === 'loadData') {
-          document.querySelector('.sidebar-content').innerHTML = '';
+          document.querySelector('.loading').classList.add('hidden');
 
           const data = message.payload;
 
