@@ -6,11 +6,14 @@
   window.BESRefreshDataHasRun = true;
 
   const refreshData = async () => {
+    const regex = /email_template_studio\/(.+)\/edit/;
+    const templateId = window.location.href.match(regex)[1];
+
     const templateDataResponse = await fetch(
       'https://app.getblueshift.com/api/v1/personalizations/template.json',
       {
-        credentials: 'include',
         method: 'POST',
+        body: {},
       }
     );
 
