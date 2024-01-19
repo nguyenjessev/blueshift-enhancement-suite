@@ -1,7 +1,10 @@
 {
   "manifest_version": 3,
   "name": "Blueshift Enhancement Suite",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "background": {
+    "scripts": ["background-script.js"]
+  },
   "content_scripts": [
     {
       "matches": ["*://*.getblueshift.com/*"],
@@ -21,7 +24,7 @@
     "default_popup": "popups/menu.html",
     "show_matches": ["*://*.getblueshift.com/*"]
   },
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "scripting"],
   "sidebar_action": {
     "default_icon": "icons/blueshift-enhancement-suite.svg",
     "default_panel": "sidebars/sidebar.html",
