@@ -1,0 +1,17 @@
+.calculate-filesize-btn {
+  color: #4c6072;
+  font-weight: 700;
+  padding: 0 1rem;
+}
+
+.calculator-contents {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.size {
+  margin-left: 1rem;
+}
