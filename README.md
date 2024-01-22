@@ -6,10 +6,9 @@ This is a suite of enhancement features for the marketing automation platform, [
 
 - Shows JSON data from the "Data" tab in a sidebar while in any email template editor tab.
 - Showing estimated email HTML filesize in toolbar.
+- Fixing the janky styling of the recommendation scheme editor.
 
 ## Planned Features
-
-- Fixing the janky styling of the recommendation scheme editor.
 
 ## Installation
 
