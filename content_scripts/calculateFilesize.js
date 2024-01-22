@@ -1,3 +1,18 @@
+const colorizeButton = (size) => {
+  const button = document.querySelector('.calculate-filesize-btn');
+  button.classList.remove('good-size');
+  button.classList.remove('ok-size');
+  button.classList.remove('bad-size');
+
+  if (size >= 104) {
+    button.classList.add('bad-size');
+  } else if (size >= 99) {
+    button.classList.add('ok-size');
+  } else {
+    button.classList.add('good-size');
+  }
+};
+
 const calculatorMain = () => {
   const calculatorContainer = document.createElement('li');
   calculatorContainer.classList.add('calculate-filesize-btn');
@@ -22,6 +37,8 @@ const calculatorMain = () => {
     const doc = iframe.contentDocument || iframe.contentWindow.document;
     const content = doc.querySelector('html').innerHTML;
     const templateSize = Math.round(new Blob([content]).size / 100) / 10;
+
+    colorizeButton(templateSize);
 
     const size = document.querySelector('.size');
     size.textContent = `~${templateSize}KB`;
