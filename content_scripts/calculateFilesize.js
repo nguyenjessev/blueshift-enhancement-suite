@@ -18,18 +18,10 @@ const calculatorMain = () => {
   toolbar.appendChild(calculatorContainer);
 
   calculatorContainer.addEventListener('click', async () => {
-    const templateRegex = /email_template_studio\/(.+)\/edit/;
-    const templateId = window.location.href.match(templateRegex)[1];
-
-    const templateDataResponse = await fetch(
-      `https://app.getblueshift.com/api/v1/email_templates/${templateId}.json`,
-      {
-        method: 'GET',
-      }
-    );
-    const templateData = await templateDataResponse.json();
-    const templateHTML = templateData.resource.content;
-    const templateSize = Math.round(new Blob([templateHTML]).size / 100) / 10;
+    const iframe = document.querySelector('email-canvas iframe');
+    const doc = iframe.contentDocument || iframe.contentWindow.document;
+    const content = doc.querySelector('html').innerHTML;
+    const templateSize = Math.round(new Blob([content]).size / 100) / 10;
 
     const size = document.querySelector('.size');
     size.textContent = `~${templateSize}KB`;
