@@ -2,12 +2,16 @@
   "manifest_version": 3,
   "name": "Blueshift Enhancement Suite",
   "version": "1.1.1",
+  "background": {
+    "scripts": ["background.js"]
+  },
   "content_scripts": [
     {
       "matches": ["*://*.getblueshift.com/*"],
       "js": [
         "/content_scripts/refreshData.js",
-        "/content_scripts/calculateFilesize.js"
+        "/content_scripts/calculateFilesize.js",
+        "/content_scripts/recommendationBuilderFix.js"
       ],
       "css": ["/content_scripts/calculateFilesize.css"]
     }
