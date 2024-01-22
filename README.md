@@ -28,3 +28,5 @@ This is a suite of enhancement features for the marketing automation platform, [
 3. Enable Developer Mode.
 4. Click "Load unpacked".
 5. Select the extension directory.
+
+You may need to allow permissions for the extension to modify webpages. Refer to your browser's official documentation for how to do that.
