@@ -32,7 +32,7 @@
     "default_popup": "popups/menu.html",
     "show_matches": ["*://*.getblueshift.com/*"]
   },
-  "permissions": ["tabs", "scripting"],
+  "permissions": ["scripting"],
   "sidebar_action": {
     "default_icon": "icons/blueshift-enhancement-suite.svg",
     "default_panel": "sidebars/sidebar.html",
