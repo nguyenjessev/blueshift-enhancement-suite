@@ -16,17 +16,17 @@
   margin-left: 1rem;
 }
 
-.tab-item.good-size {
+.bsft-tab-theme-box .tab-item.good-size {
   background: hsl(120, 75%, 75%);
   color: #2e2e2d;
 }
 
-.tab-item.ok-size {
+.bsft-tab-theme-box .tab-item.ok-size {
   background: hsl(60, 75%, 75%);
   color: #2e2e2d;
 }
 
-.tab-item.bad-size {
+.bsft-tab-theme-box .tab-item.bad-size {
   background: hsl(0, 75%, 75%);
   color: black;
 }

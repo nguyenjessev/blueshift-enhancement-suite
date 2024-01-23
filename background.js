@@ -1,3 +1,7 @@
+if (typeof browser == 'undefined') {
+  globalThis.browser = chrome;
+}
+
 browser.runtime.onMessage.addListener(async (message, sender) => {
   if (message.command === 'insertCSS') {
     await browser.scripting.insertCSS({
